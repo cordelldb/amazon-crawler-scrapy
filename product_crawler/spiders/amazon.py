@@ -5,7 +5,7 @@ class AmazonSpider(scrapy.Spider):
     name = "amazon"
  
     def start_requests(self):
-        keyword = ['eyeshadow+palette']
+        keyword = ['blender+bottle']
         url = f'https://www.amazon.com/s?k={keyword}&page=1'
         yield scrapy.Request(url=url, callback=self.discover_product_urls, meta={'keyword': keyword, 'page': 1})
 
@@ -56,8 +56,7 @@ class AmazonSpider(scrapy.Spider):
             
 
     
-    
-    
+
 
         
         
