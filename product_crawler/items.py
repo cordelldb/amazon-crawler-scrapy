@@ -20,6 +20,8 @@ class AmazonProduct(scrapy.Item):
     title_desc = scrapy.Field()
     product_weight = scrapy.Field()
     marketplace_id = scrapy.Field()
+    seller_url = scrapy.Field()
+    seller_name = scrapy.Field()
 
 
 def handle_data(value):

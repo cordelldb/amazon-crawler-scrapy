@@ -17,7 +17,7 @@ DOWNLOADER_MIDDLEWARES = {
     "scrapy_zyte_api.ScrapyZyteAPIDownloaderMiddleware": 1000,
 }
 REQUEST_FINGERPRINTER_CLASS = "scrapy_zyte_api.ScrapyZyteAPIRequestFingerprinter"
-ZYTE_API_KEY = ""
+ZYTE_API_KEY = "89a1b58a0c444ebabc8b69ef305cf78b"
 ZYTE_API_TRANSPARENT_MODE = True
 
 ITEM_PIPELINES = {
@@ -25,7 +25,7 @@ ITEM_PIPELINES = {
     # "product_crawler.pipelines.DatabasePipeline": 200,
 }
 
-FEED_EXPORT_FIELDS = ["product_id", "marketplace_id", "product_title", "title_desc", "product_price", "list_price", "manufacturer", "upc", "model_name", "product_dimensions", "product_weight", "customer_ratings", "average_rating", "listing_url", "image_url"]
+FEED_EXPORT_FIELDS = ["product_id", "marketplace_id", "product_title", "title_desc", "product_price", "list_price", "manufacturer", "upc", "model_name", "product_dimensions", "product_weight", "customer_ratings", "average_rating", "listing_url", "image_url", "seller_name", "seller_url"]
 
 
 

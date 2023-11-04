@@ -50,6 +50,8 @@ class AmazonSpider(scrapy.Spider):
             loader.add_css('product_weight', 'th:contains("Weight") + td::text')
             loader.add_css('list_price', '.basisPrice span span::text')
             loader.add_value('marketplace_id', '2')
+            loader.add_css('seller_name', '#sellerProfileTriggerId::text')
+            loader.add_css('seller_url', '#sellerProfileTriggerId::attr(href)')
             yield loader.load_item()
 
 
