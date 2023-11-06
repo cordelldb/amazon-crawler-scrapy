@@ -1,0 +1,496 @@
+
+
+    window.isTwisterAUI = 1;
+    window.DetailPage ={};
+    window.gIsNewTwister = true;
+    window.DetailPage.useTwisterJsInitFromDPXPartially = 1;
+    P.register('twister-js-init-mason-data', function() {
+       var dataToReturn = {
+        "printConsoleLogs": 0,
+        "hoverMS": 0,
+        "dimensions": [],
+        "prioritizeReqPrefetch": 0,
+        "prefetchRelatedAttrs": "{\"landingPrefetchState\":\"TRIGGER_ON_INTERACTION\",\"prefetchOtherReqDimensions\":0,\"performLandingAsinPrefetch\":0,\"performParentPrefetch\":0,\"performPrefetches\":1,\"performPartialPrefetch\":0}",
+        "current_asin": null,
+        "prefetchCount": 0,
+        "newPrefetchWeblab": "",
+        "isProductizationEnabled": 1,
+        "productGroupID": "kitchen_display_on_website",
+        "displayConfigStylesData": {
+            "vodd": {
+                "selected": "voddSelect",
+                "invalid": "voddUnavailable",
+                "available": "voddAvailable"
+            },
+            "etdd": {
+                "selected": "selected",
+                "invalid": "invalid",
+                "available": "available"
+            },
+            "dropdown": {
+                "hidden": "dropdownHidden",
+                "selected": "dropdownSelect",
+                "unavailable": "dropdownCurrentlyUnavailable",
+                "invalid": "dropdownUnavailable",
+                "available": "dropdownAvailable"
+            },
+            "swatch": {
+                "selected": "swatchSelect",
+                "unavailable": "swatchCurrentlyUnavailable",
+                "invalid": "swatchUnavailable",
+                "available": "swatchAvailable"
+            },
+            "singleton": {
+                "selected": "singletonSelect",
+                "invalid": "singletonSelect",
+                "available": "singletonSelect"
+            }
+        },
+        "isConsolesOrAccessories": 0,
+        "view": "glance",
+        "twisterAccessibilityCurrentSelection": "Your current selection is : ",
+        "isLoggingEnabled": 0,
+        "useMS": 0,
+        "dimToAsinMapData": {},
+        "selected_variation_values": {},
+        "unselectedDimCount": null,
+        "loadingBarHtml2": "<table border=\"0\" width=\"100%\"> <tr>   <td align=\"center\" style=\"font-family: Tahoma, Arial, Helvetica, sans-serif;font-size:12px;\">Loading...</td></tr> <tr> <td align=\"center\"><img src=\"https://m.media-amazon.com/images/G/01/x-locale/communities/tags/snake._CB485935600_.gif\" style=\"margin-left:-8px;\" /></td>  </tr></table>",
+        "measurement": {
+            "cf": {
+                "longPollImageTag": null,
+                "count": 2,
+                "marker": "twister-cf-marker_feature_div",
+                "longPollHtmlTag": null
+            },
+            "atf": {
+                "count": 2,
+                "marker": "twister-atf-marker_feature_div"
+            }
+        },
+        "selected_variations": {},
+        "jqupgrade": 0,
+        "num_variation_dimensions": 0,
+        "ajaxTimeout": 20000,
+        "prefetchFixWeblab": 1,
+        "dimensionValuesDisplayData": {},
+        "hidePopover": 1,
+        "disableJsInteractions": 0,
+        "parent_asin": "B0CH1DZRM3",
+        "isViewProductizationEnabled": 1,
+        "rps": 0,
+        "variation_values": {},
+        "deviceType": "web",
+        "keysToPopulateDetailPageStateController": [
+            "current_asin",
+            "parent_asin",
+            "productGroupID",
+            "storeID",
+            "unselectedDimCount",
+            "currentDimCombID",
+            "reactId",
+            "dimensionSelectionData",
+            "num_total_variations",
+            "num_variation_dimensions",
+            "rps",
+            "view",
+            "selected_variations",
+            "variation_values",
+            "selected_variation_values",
+            "asin_variation_values"
+        ],
+        "num_total_variations": 0,
+        "showDimSecondUnavailablePopover": 1,
+        "twisterUpdateURLInfo": {
+            "immutableURLPrefix": "/gp/twister/ajaxv2?sid=144-4087630-3262617&ptd=FOOD_BLENDER&keywords=blender%2Bbottle&sCac=1&twisterView=glance&pgid=kitchen_display_on_website&sr=8-150&rid=08AHFZ4NYCFJF01XJA0G&auiAjax=1&json=1&dpxAjaxFlag=1&isUDPFlag=1&ee=2&originalHttpReferer=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3Dblender%2Bbottle%26amp%3Bpage%3D3%26amp%3Bcrid%3D31TAW6LCHP21V%26amp%3Bqid%3D1699133561%26amp%3Bsprefix%3Dble%252Caps%252C140%26amp%3Bref%3Dsr_pg_3&parentAsin=B0CH1DZRM3&enPre=1&qid=1699135376&dcm=1&storeID=kitchen",
+            "immutableParams": {
+                "sid": "144-4087630-3262617",
+                "ptd": "FOOD_BLENDER",
+                "json": "1",
+                "dpxAjaxFlag": "1",
+                "keywords": "blender%2Bbottle",
+                "sCac": "1",
+                "isUDPFlag": "1",
+                "twisterView": "glance",
+                "ee": "2",
+                "pgid": "kitchen_display_on_website",
+                "sr": "8-150",
+                "rid": "08AHFZ4NYCFJF01XJA0G",
+                "originalHttpReferer": "https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3Dblender%2Bbottle%26amp%3Bpage%3D3%26amp%3Bcrid%3D31TAW6LCHP21V%26amp%3Bqid%3D1699133561%26amp%3Bsprefix%3Dble%252Caps%252C140%26amp%3Bref%3Dsr_pg_3",
+                "parentAsin": "B0CH1feDZRM3",
+                "enPre": "1",
+                "qid": "1699135376",
+                "dcm": "1",
+                "storeID": "kitchen",
+                "auiAjax": "1"
+            },
+            "mutableParams": {}
+        },
+        "variationDisplayLabels": {},
+        "productTypeName": "FOOD_BLENDER",
+        "twisterInitPrefetchMode": 0,
+        "unavailablePopOverStringValue": "Not available in selected",
+        "dimensionSelectionData": [],
+        "dimensionsDisplayType": [],
+        "dimensionsDisplay": [],
+        "dimensionValuesData": [],
+        "reactId": "",
+        "use-early-twister-init": 1,
+        "deletedLandingAsinInfo": {},
+        "isTablet": 0,
+        "asin_variation_values": {},
+        "contextMetaData": {
+            "parent": {
+                "mTypeSpecificURLParams": {},
+                "elementList": [
+                    {
+                        "isPrefetchable": 0,
+                        "divToUpdate": "twister-atf-marker_feature_div"
+                    },
+                    {
+                        "isPrefetchable": 0,
+                        "divToUpdate": "twister-cf-marker_feature_div"
+                    },
+                    {
+                        "divToUpdate": "andon-cord-pulling_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dvd-rental-badge_feature_div"
+                    },
+                    {
+                        "divToUpdate": "product-alert-grid_feature_div"
+                    },
+                    {
+                        "divToUpdate": "hero-quick-promo-grid_feature_div"
+                    },
+                    {
+                        "divToUpdate": "mags-dp-msg1_feature_div"
+                    },
+                    {
+                        "divToUpdate": "qpe-title-tag_feature_div"
+                    },
+                    {
+                        "divToUpdate": "petronas-promo-right-col_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-mirai-btf-shopbylook_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-btf-bundle_feature_div"
+                    },
+                    {
+                        "divToUpdate": "services-widget-1_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "sims-consolidated-1_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "sims-consolidated-2_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-btf-bundle-discoverability_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "sims-consolidated-3_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-btf-hlcx-comparison_feature_div"
+                    },
+                    {
+                        "divToUpdate": "ask-dp-search_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-product-details_feature_div"
+                    },
+                    {
+                        "divToUpdate": "need-help-deciding_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "product-details-grid_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-btf-productDocuments_feature_div"
+                    },
+                    {
+                        "isPrefetchable": 0,
+                        "divToUpdate": "dp-out-of-stock-top_feature_div"
+                    },
+                    {
+                        "divToUpdate": "view-dpv-rich-media-2_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-window-blind-disclaimer_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "divToUpdate": "cpsia-product-safety-warning_feature_div"
+                    },
+                    {
+                        "divToUpdate": "va-related-videos-widget_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "divToUpdate": "promotions_feature_div"
+                    },
+                    {
+                        "divToUpdate": "empty_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-post-purchase-witb-btf_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-aplus-brand-story_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-btf-renewed-program-description_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-aplus-product-description_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-aplus-3p-product-description_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-desktop-posts-same-brand_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-aplus-sustainability-story_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "sims-consolidated-4_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "dp-ads-middle_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "sims-consolidated-5_feature_div"
+                    },
+                    {
+                        "divToUpdate": "services-widget-2_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dp-ads-center-promo-top_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dp-ads-center-promo_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "ask-btf_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "divToUpdate": "dpx-giveaway_feature_div"
+                    },
+                    {
+                        "isPrefetchable": 0,
+                        "divToUpdate": "twister-log-metrics_feature_div"
+                    }
+                ]
+            },
+            "master": {
+                "mTypeSpecificURLParams": {}
+            },
+            "partial": {
+                "mTypeSpecificURLParams": {},
+                "elementList": [
+                    {
+                        "divToUpdate": "center-28_feature_div"
+                    }
+                ]
+            },
+            "full": {
+                "mTypeSpecificURLParams": {
+                    "psc": 1
+                },
+                "elementList": [
+                    {
+                        "isPrefetchable": 0,
+                        "divToUpdate": "twister-atf-marker_feature_div"
+                    },
+                    {
+                        "isPrefetchable": 0,
+                        "divToUpdate": "twister-cf-marker_feature_div"
+                    },
+                    {
+                        "divToUpdate": "andon-cord-pulling_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dvd-rental-badge_feature_div"
+                    },
+                    {
+                        "divToUpdate": "product-alert-grid_feature_div"
+                    },
+                    {
+                        "divToUpdate": "hero-quick-promo-grid_feature_div"
+                    },
+                    {
+                        "divToUpdate": "mags-dp-msg1_feature_div"
+                    },
+                    {
+                        "divToUpdate": "qpe-title-tag_feature_div"
+                    },
+                    {
+                        "divToUpdate": "petronas-promo-right-col_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-mirai-btf-shopbylook_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-btf-bundle_feature_div"
+                    },
+                    {
+                        "divToUpdate": "services-widget-1_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "sims-consolidated-1_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "sims-consolidated-2_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-btf-bundle-discoverability_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "sims-consolidated-3_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-btf-hlcx-comparison_feature_div"
+                    },
+                    {
+                        "divToUpdate": "ask-dp-search_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-product-details_feature_div"
+                    },
+                    {
+                        "divToUpdate": "need-help-deciding_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "product-details-grid_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-btf-productDocuments_feature_div"
+                    },
+                    {
+                        "isPrefetchable": 0,
+                        "divToUpdate": "dp-out-of-stock-top_feature_div"
+                    },
+                    {
+                        "divToUpdate": "view-dpv-rich-media-2_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-window-blind-disclaimer_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "divToUpdate": "cpsia-product-safety-warning_feature_div"
+                    },
+                    {
+                        "divToUpdate": "center-28_feature_div"
+                    },
+                    {
+                        "divToUpdate": "va-related-videos-widget_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "divToUpdate": "promotions_feature_div"
+                    },
+                    {
+                        "divToUpdate": "empty_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-post-purchase-witb-btf_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-aplus-brand-story_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-btf-renewed-program-description_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-aplus-product-description_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-aplus-3p-product-description_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-desktop-posts-same-brand_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dpx-aplus-sustainability-story_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "sims-consolidated-4_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "dp-ads-middle_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "sims-consolidated-5_feature_div"
+                    },
+                    {
+                        "divToUpdate": "services-widget-2_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dp-ads-center-promo-top_feature_div"
+                    },
+                    {
+                        "divToUpdate": "dp-ads-center-promo_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "isPrefetchable": 0,
+                        "divToUpdate": "ask-btf_feature_div"
+                    },
+                    {
+                        "loadingBar": 1,
+                        "divToUpdate": "dpx-giveaway_feature_div"
+                    },
+                    {
+                        "isPrefetchable": 0,
+                        "divToUpdate": "twister-log-metrics_feature_div"
+                    }
+                ]
+            }
+        },
+        "useBeaconizedEVDD": 1,
+        "loadingBarHtml": "<div style=\"display:inline;margin:10px;\"><span style=\"font-family: Tahoma,Arial,Helvetica,sans-serif;color:#000000;font-size: 12px; \">Loading...<img src=\"https://m.media-amazon.com/images/G/01/x-locale/communities/tags/snake._CB485935600_.gif\" width=\"16\" height=\"16\" align=\"absmiddle\" style=\"display: inline\"></span></div>",
+        "currentDimCombID": "",
+        "pageRefreshRefactor": 1,
+        "useVariationsOverlay": 0,
+        "asinToDimIndexMapData": {},
+        "twisterMarkImageLoad": 1,
+        "storeID": null
+    }; //selectively not escaping this.
+       return dataToReturn;
+});
+

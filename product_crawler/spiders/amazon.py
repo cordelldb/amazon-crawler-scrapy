@@ -5,9 +5,12 @@ class AmazonSpider(scrapy.Spider):
     name = "amazon"
  
     def start_requests(self):
-        keyword = ['blender+bottle']
-        url = f'https://www.amazon.com/s?k={keyword}&page=1'
-        yield scrapy.Request(url=url, callback=self.discover_product_urls, meta={'keyword': keyword, 'page': 1})
+        keyword_list = [
+            '9+color+eyeshadow+palette',
+        ]
+        for keyword in keyword_list:
+            url = f'https://www.amazon.com/s?k={keyword}&page=1'
+            yield scrapy.Request(url=url, callback=self.discover_product_urls, meta={'keyword': keyword, 'page': 1})
 
     def discover_product_urls(self, response):
         page = response.meta['page']
@@ -53,7 +56,7 @@ class AmazonSpider(scrapy.Spider):
             loader.add_css('seller_name', '#sellerProfileTriggerId::text')
             loader.add_css('seller_url', '#sellerProfileTriggerId::attr(href)')
             yield loader.load_item()
-
+ 
 
             
 

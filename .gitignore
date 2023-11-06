@@ -1,0 +1,10 @@
+product_crawler/spiders/data/all_blender_canada.csv
+product_crawler/spiders/data/all_blender_keywords.csv
+product_crawler/spiders/data/all_blender_UK.csv
+product_crawler/spiders/data/asin_upload.csv
+product_crawler/spiders/data/blender-bottle.csv
+product_crawler/spiders/data/huda_palettes.csv
+product_crawler/spiders/data/products_upc.csv
+product_crawler/__pycache__/settings.cpython-310.pyc
+product_crawler/spiders/__pycache__/amazon.cpython-310.pyc
+database_import.py
