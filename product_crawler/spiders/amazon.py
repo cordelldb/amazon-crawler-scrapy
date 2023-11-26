@@ -5,19 +5,28 @@ class AmazonSpider(scrapy.Spider):
     name = "amazon"
  
     def start_requests(self):
-        keyword_list = [
-            '9+color+eyeshadow+palette',
-        ]
-        for keyword in keyword_list:
-            url = f'https://www.amazon.com/s?k={keyword}&page=1'
-            yield scrapy.Request(url=url, callback=self.discover_product_urls, meta={'keyword': keyword, 'page': 1})
+        
+        base_url = 'https://www.amazon.com/dp/'
+
+        with open('asins.txt', 'r') as file:
+            asins = [line.strip() for line in file.readlines()]
+        for asin in asins:
+            url = base_url + asin
+            
+            
+            yield scrapy.Request(url=url, callback=self.discover_product_urls)
+            
+        # yield scrapy.Request(url=url, callback=self.parse)
+        # keyword_list = [
+        #     'laptop+cases',
+        # ]
 
     def discover_product_urls(self, response):
         page = response.meta['page']
         keyword = response.meta['keyword'] 
         
         product_urls = response.css("h2 a::attr(href)")
-        yield from response.follow_all(product_urls, callback=self.parse_product, meta={'keyword': keyword, 'page': page})
+        yield from response.follow_all(product_urls, callback=self.parse_product)
          
         if page == 1:
             available_pages = response.xpath(
@@ -27,7 +36,7 @@ class AmazonSpider(scrapy.Spider):
             last_page = available_pages[-1]
             for page_num in range(2, int(last_page)):
                 amazon_search_url = f'https://www.amazon.com/s?k={keyword}&page={page_num}'
-                yield scrapy.Request(url=amazon_search_url, callback=self.discover_product_urls, meta={'keyword': keyword, 'page': page_num})
+                yield scrapy.Request(url=amazon_search_url, callback=self.discover_product_urls)
 
     def parse_product(self, response):
         products = response.css("#a-page")
@@ -56,15 +65,3 @@ class AmazonSpider(scrapy.Spider):
             loader.add_css('seller_name', '#sellerProfileTriggerId::text')
             loader.add_css('seller_url', '#sellerProfileTriggerId::attr(href)')
             yield loader.load_item()
- 
-
-            
-
-    
-
-
-        
-        
-
-            
-            

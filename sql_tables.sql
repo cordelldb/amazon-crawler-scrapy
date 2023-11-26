@@ -20,6 +20,14 @@ CREATE TABLE listing (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+
+
+CREATE TABLE states (
+    code varchar(11) PRIMARY KEY,
+    full_name varchar(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
 CREATE TABLE country (
     code varchar(11) PRIMARY KEY,
     full_name varchar(100),
