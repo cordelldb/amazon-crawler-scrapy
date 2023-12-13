@@ -1,6 +1,6 @@
 import scrapy
 from scrapy.loader import ItemLoader
-from scrapy.loader.processors import TakeFirst, Join, MapCompose, Compose
+from itemloaders.processors import TakeFirst, Join, MapCompose, Compose
 import re
 
 class AmazonProduct(scrapy.Item):
@@ -22,6 +22,7 @@ class AmazonProduct(scrapy.Item):
     marketplace_id = scrapy.Field()
     seller_url = scrapy.Field()
     seller_name = scrapy.Field()
+    status = scrapy.Field()
 
 
 def handle_data(value):

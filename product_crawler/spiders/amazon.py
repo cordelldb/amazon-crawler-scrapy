@@ -3,32 +3,27 @@ from product_crawler.items import AmazonProduct, AmazonProductLoader
 
 class AmazonSpider(scrapy.Spider):
     name = "amazon"
- 
+
+    def __init__(self, keyword=None, asins=None, *args, **kwargs):
+        super(AmazonSpider, self).__init__(*args, **kwargs)
+        self.keyword = keyword
+        self.asins = asins
+    
     def start_requests(self):
+        keyword_list = ['']
+        for keyword in keyword_list:
+            amazon_search_url = f'https://www.amazon.com/s?k={keyword}&page=1'
+            yield scrapy.Request(url=amazon_search_url, callback=self.discover_product_urls, meta={'keyword': keyword, 'page': 1})
         
-        base_url = 'https://www.amazon.com/dp/'
-
-        with open('asins.txt', 'r') as file:
-            asins = [line.strip() for line in file.readlines()]
-        for asin in asins:
-            url = base_url + asin
-            
-            
-            yield scrapy.Request(url=url, callback=self.discover_product_urls)
-            
-        # yield scrapy.Request(url=url, callback=self.parse)
-        # keyword_list = [
-        #     'laptop+cases',
-        # ]
-
+ 
     def discover_product_urls(self, response):
         page = response.meta['page']
         keyword = response.meta['keyword'] 
         
         product_urls = response.css("h2 a::attr(href)")
-        yield from response.follow_all(product_urls, callback=self.parse_product)
+        yield from response.follow_all(product_urls, callback=self.parse_product, meta={'page': page})
          
-        if page == 1:
+        if page == 1: 
             available_pages = response.xpath(
                 '//*[contains(@class, "s-pagination-item")][not(has-class("s-pagination-separator"))]/text()'
             ).getall()
@@ -64,4 +59,5 @@ class AmazonSpider(scrapy.Spider):
             loader.add_value('marketplace_id', '2')
             loader.add_css('seller_name', '#sellerProfileTriggerId::text')
             loader.add_css('seller_url', '#sellerProfileTriggerId::attr(href)')
+            loader.add_css('status', '.a-row span::text')
             yield loader.load_item()
